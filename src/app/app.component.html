@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="generator">
+    <h1>App Icon Generator</h1>
+    <input type="file" class="file-input" (change)="onImageUpload($event)" accept="image/*" />
+
+    <div *ngIf="uploadedImage" class="preview-section">
+      <h3>Preview:</h3>
+      <img [src]="uploadedImage" alt="Uploaded Image" class="preview-image" />
+      <button class="generate-button" (click)="generateFiles()">Generate Icons</button>
+    </div>
+
+    <div *ngIf="generatedFiles.length > 0" class="files-section">
+      <h3>Generated Files:</h3>
+      <ul class="file-list">
+        <li *ngFor="let file of generatedFiles">
+          <span>{{ file.name }}</span>
+          <button class="download-button" (click)="downloadBlob(file.blob, file.name)">Download</button>
+        </li>
+
+      </ul>
+      <button class="download-all-button" (click)="downloadAllFiles()">Download All</button>
+    </div>
+  </div>
+
+</div>
