@@ -1,18 +1,13 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import Pica from 'pica';
-import { MainComponent } from './main/main.component';
-import { AboutComponent } from './about/about.component';
-
 @Component({
-  selector: 'app-root',
+  selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, FormsModule, MainComponent, AboutComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+
+  templateUrl: './main.component.html',
+  styleUrl: './main.component.scss',
 })
-export class AppComponent {
+export class MainComponent {
   uploadedImage: string | null = null;
   originalFile: File | null = null;
   generatedFiles: { name: string; blob: Blob }[] = [];
