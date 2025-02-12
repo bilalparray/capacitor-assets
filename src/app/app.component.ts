@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 import Pica from 'pica';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule, MainComponent, AboutComponent],
+  imports: [CommonModule, FormsModule, MainComponent, FooterComponent,NavbarComponent, ContactComponent,PrivacyComponent,AboutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
