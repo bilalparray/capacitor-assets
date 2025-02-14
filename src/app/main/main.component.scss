@@ -24,13 +24,15 @@ h1 {
   display: block;
   margin: 20px auto;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   width: 60%;
 }
-
+input#file-upload-button {
+  background-color: red;
+}
 /* Preview section styling */
 .preview-section {
   margin-top: 20px;
